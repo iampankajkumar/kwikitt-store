@@ -8,7 +8,7 @@ public interface ProductDao {
 
 	List<Product> getAllProducts();
 
-	Product getProductById(String productId);
+	Product getProductById(Long productId);
 
 	void deleteProduct(String productId);
 

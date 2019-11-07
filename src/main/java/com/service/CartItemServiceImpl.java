@@ -26,8 +26,8 @@ public class CartItemServiceImpl implements CartItemService {
 
 	}
 
-	public void removeCartItem(String CartItemId) {
-		cartItemDao.removeCartItem(CartItemId);
+	public void removeCartItem(Long cartItemId) {
+		cartItemDao.removeCartItem(cartItemId);
 	}
 
 	public void removeAllCartItems(Cart cart) {

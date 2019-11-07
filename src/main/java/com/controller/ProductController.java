@@ -75,7 +75,7 @@ public class ProductController {
 	// this is used for getting the product by productId
 
 	@RequestMapping("getProductById/{productId}")
-	public ModelAndView getProductById(@PathVariable(value = "productId") String productId) {
+	public ModelAndView getProductById(@PathVariable(value = "productId") Long productId) {
 		Product product = productService.getProductById(productId);
 		return new ModelAndView("productPage", "productObj", product);
 	}
@@ -139,7 +139,7 @@ public class ProductController {
 	}
 
 	@RequestMapping(value = "/admin/product/editProduct/{productId}")
-	public ModelAndView getEditForm(@PathVariable(value = "productId") String productId) {
+	public ModelAndView getEditForm(@PathVariable(value = "productId") Long productId) {
 		Product product = productService.getProductById(productId);
 		return new ModelAndView("editProduct", "editProductObj", product);
 	}

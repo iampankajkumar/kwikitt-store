@@ -12,10 +12,10 @@
 	<!-- database properties DataSource -->
 	<bean id="dataSource"
 		class="org.springframework.jdbc.datasource.DriverManagerDataSource">
-		<property name="driverClassName" value="org.h2.Driver" />
-		<property name="url" value="jdbc:h2:tcp://localhost/~/ecommerce" />
-		<property name="username" value="sa" />
-		<property name="password" value="" />
+		<property name="driverClassName" value="com.mysql.jdbc.Driver" />
+		<property name="url" value="jdbc:mysql://localhost:3306/ecommerce" />
+		<property name="username" value="root" />
+		<property name="password" value="root" />
 	</bean>
 
 	<bean id="sessionFactory"
@@ -25,7 +25,7 @@
 		<property name="dataSource" ref="dataSource"></property>
 		<property name="hibernateProperties">
 			<props>
-				<prop key="hibernate.dialect">org.hibernate.dialect.H2Dialect</prop>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>
 
 				<!-- hibernate mapping to database automatically -->
 				<!-- when we use create-drop instead of update the table is created automatically 

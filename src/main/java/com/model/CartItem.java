@@ -19,8 +19,8 @@ public class CartItem implements Serializable {
 	private static final long serialVersionUID = -2455760938054036364L;
 
 	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private String cartItemId;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long cartItemId;
 
 	private int quality;
 
@@ -35,11 +35,11 @@ public class CartItem implements Serializable {
 	@JsonIgnore
 	private Cart cart;
 
-	public String getCartItemId() {
+	public Long getCartItemId() {
 		return cartItemId;
 	}
 
-	public void setCartItemId(String cartItemId) {
+	public void setCartItemId(Long cartItemId) {
 		this.cartItemId = cartItemId;
 	}
 

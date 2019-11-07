@@ -45,7 +45,7 @@ public class ProductDaoImpl implements ProductDao {
 		return products;
 	}
 
-	public Product getProductById(String productId) {
+	public Product getProductById(Long productId) {
 
 		// Reading the records from the table
 		Session session = sessionFactory.openSession();

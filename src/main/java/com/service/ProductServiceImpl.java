@@ -29,7 +29,7 @@ public class ProductServiceImpl implements ProductService {
 	}
 
 	
-	public Product getProductById(String productId) {
+	public Product getProductById(Long productId) {
 		return productDao.getProductById(productId);
 	}
 
